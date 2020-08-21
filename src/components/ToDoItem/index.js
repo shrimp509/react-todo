@@ -8,7 +8,7 @@ const ToDoItem = ({task, deleteTask}) => {
   return (
     <div className={classes}>
       <span onClick={() => setIsComplete(!isComplete)}>{task}</span>
-      <button onClick={() => deleteTask()}>Delete</button>
+      <button onClick={() => deleteTask()}>刪除</button>
     </div>
   );
 };

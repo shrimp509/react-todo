@@ -11,7 +11,7 @@ const ToDoForm = ({addTask}) => {
   return (
     <form onSubmit={handleForm}>
       <input type="text" onChange={(e) => {setValue(e.target.value)}}/>
-      <input type="submit" />
+      <input type="submit" value="新增"/>
     </form>
   );
 };

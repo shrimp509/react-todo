@@ -6,9 +6,11 @@ import ToDoForm from '../ToDoForm'
 const ToDoList = () => {
 
   const initState = [
-    'sleep',
-    'dinner',
-    'pixel 4a'
+    '吃飯',
+    '睡覺',
+    '打東東',
+    '我要 pixel 4a',
+    '吃吃吃'
   ]
 
   const [tasks, setTasks] = useState(initState);
@@ -28,7 +30,7 @@ const ToDoList = () => {
   return (
     <div>
       {tasks.map((task, index) => (
-        <ToDoItem task={task} deleteTask={() => deleteTask(index)} />
+        <ToDoItem key={task+index} task={task} deleteTask={() => deleteTask(index)} />
       ))}
       <ToDoForm addTask={(value) => addTask(value)}/>
     </div>
