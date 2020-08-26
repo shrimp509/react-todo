@@ -19,6 +19,8 @@ const ToDoList = () => {
     const newTasks = [...tasks];
     newTasks.splice(index, 1);
     setTasks(newTasks);
+
+
   };
 
   const addTask = (value) => {
@@ -29,6 +31,11 @@ const ToDoList = () => {
 
   return (
     <div>
+      {(() => {
+        if (tasks.length == 0) {
+          return <p>Empty Todo List</p>
+        }
+      })()}
       {tasks.map((task, index) => (
         <ToDoItem key={task+index} task={task} deleteTask={() => deleteTask(index)} />
       ))}
